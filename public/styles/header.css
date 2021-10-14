@@ -1,0 +1,21 @@
+.main_header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 500px; 
+  width: 100%;
+  color: black;
+  background-color:#c2bd9f;
+  background-image: url("https://www.transparenttextures.com/patterns/arches.png");
+  padding-top: 115px;
+}
+
+  /* Desktop Styles */
+  @media only screen and (min-width: 1024px) {
+    .main_header {
+      max-height: fit-content;
+      width: 30%;
+      float: left;
+    }
+  }

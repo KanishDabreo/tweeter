@@ -1,0 +1,154 @@
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
+  margin: 20px auto;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: 'Bungee', sans-serif;
+}
+
+button { 
+  margin-top: 3px;
+  padding: 9px 25px;
+  background-color: #c24d2a;
+  color: aliceblue;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+button:hover { 
+  background-color: #3c6b30;
+}
+
+.counter {
+  max-width: 750px;
+  padding: 9px 25px;
+}
+
+#tweets-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+#empty_error {
+  padding: 9px 25px;
+  color: red;
+  font-size: medium;
+  display: block;
+  border: 3px;
+  border-color: red;
+  border-style: solid;
+}
+
+#length_error {
+  padding: 9px 25px;
+  color: red;
+  font-size: medium;
+  display: block;
+  border: 3px;
+  border-color: red;
+  border-style: solid;
+}
+
+.tweet {
+  display: flex;
+  flex-direction: column;
+  border: 2px;
+  border-color: black;
+  border-style: solid;
+  width: 90%;
+  margin: 10px auto;
+}
+
+.tweet:hover { 
+  box-shadow: #3c6b30;
+  box-shadow: 5px 5px;
+}
+
+.tweet_header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.user_icon {
+  padding: 9px 25px;
+  margin-left: 0.5em;
+  color: black;
+}
+
+.tweet_handle {
+  padding: 9px 25px;
+  margin-right: 0.5em;
+} 
+
+.tweet_body {
+  padding: 9px 25px;
+  color: black;
+}
+
+.tweet_footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.timestamp {
+  padding: 9px 25px;
+  margin-left: 0.5em;
+}
+
+.icons {
+  padding: 9px 25px;
+  margin-left: 0.5em;
+}
+
+.icons i:hover { 
+  color: #c24d2a;
+}
+
+@media only screen and (min-width: 1024px) {
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    margin-left: 30%;
+    padding-left: 3%;
+  }
+  #tweets-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 68%;
+  } 
+  #empty_error {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    border: 3px;
+    border-color: red;
+    border-style: solid;
+  }  
+  #length_error {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    border: 3px;
+    border-color: red;
+    border-style: solid;
+  }  
+}
