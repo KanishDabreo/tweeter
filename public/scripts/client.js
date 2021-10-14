@@ -47,15 +47,12 @@ $(document).ready(function() {
       </article>`);
     return $tweet;
   };
-
   const $tweet = createTweetElement(tweetData);
 
-  // Test / driver code (temporary)
-  console.log($tweet); // to see what it looks like
   console.log("container", $('#tweets-container'));
-  $('#tweets-container').prepend($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
-
-  // Fake data taken from initial-tweets.json
+  //adds new tweets to top of container
+  $('#tweets-container').prepend($tweet); 
+  //filler data taken from initial-tweets.json
   const data = [
     {
       "user": {
@@ -97,7 +94,6 @@ $(document).ready(function() {
   $('#tweet-form').on('submit', function(event) {
     //prevent the default behaviour of the submit event (data submission and page refresh)
     event.preventDefault();
-    // console.log('*********THIS *******:', $(this).serialize())
     const serializeData = $(this).serialize();
     const $textLength = $('#tweet-text').val().length;
     if ($textLength > 0 && $textLength <= 140) {
