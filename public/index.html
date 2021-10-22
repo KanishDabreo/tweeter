@@ -44,24 +44,27 @@
       <span class="tweeter_logo">Tweeter</span>
     </div>
     <div>
+      <!-- Compose new tweet button -->
       <ul class="nav_links">
-        <li><a href="#"><b>Write</b> a new tweet</a></li>
-        <li><i class="fa-solid fa-angles-down"></i></li>
+        <li><a href="#">Write a new tweet</a></li>
+        <li><i class="btn__icon fas fa-angle-double-down"></i></li>
       </ul>
     </div>
   </nav>
+    <!-- User Profile -->
   <header class="main_header">
     <div>
       <img class="avatar_img" src="/images/avatar.jpg">
     </div>
-    <div>
-      <h4 class="avatar_name">Kagome Higurashi</h4>
+    <div class="avatar_name">
+      <h4><span class="profile--bold">Kagome</span> Higurashi</h4>
     </div>
   </header>
-  <!-- Page-specific (main) content here -->
+  <!-- Main content container -->
   <main>
+  <!-- Error messages -->
     <section class="new-tweet">
-      <p id="empty_error">Empty: Please enter tweet!</p>
+      <p id="empty_error"><i class="fas fa-exclamation-triangle">   Empty: Please enter tweet!</i></p>
       <script>
         $("p").hide();
         $("a").click(function (event) {
@@ -69,7 +72,7 @@
           $(this).hide();
         });
       </script>
-      <p id="length_error">Too Long: 140 character limit!</p>
+      <p id="length_error"><i class="fas fa-exclamation-triangle">   Too Long: 140 character limit!</i></p>
       <script>
         $("p").hide();
         $("a").click(function (event) {
@@ -77,9 +80,9 @@
           $(this).hide();
         });
       </script>
-      <!-- Tweets -->
+      <!-- New tweet input container -->
       <form id="tweet-form" method="POST" action="/tweets">
-        <label for="tweet-text">What are you humming about?</label>
+        <label for="tweet-text"> What are you humming about?</label>
         <br>
         <textarea name="text" id="tweet-text"></textarea>
         <section class="footer">
@@ -95,11 +98,4 @@
   <script type="text/javascript" src="/scripts/client.js"></script>
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 </body>
-
 </html>
-<!-- <link
-rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-crossorigin="anonymous"
-/> -->

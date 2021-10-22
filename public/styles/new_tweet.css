@@ -97,12 +97,14 @@ button:hover {
 .tweet_body {
   padding: 9px 25px;
   color: black;
+  word-wrap: break-word;
 }
 
 .tweet_footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  border-top: 3px solid #545149;
   width: 100%;
 }
 
