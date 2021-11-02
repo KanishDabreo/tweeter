@@ -65,28 +65,14 @@
   <!-- Error messages -->
     <section class="new-tweet">
       <p id="empty_error"><i class="fas fa-exclamation-triangle">   Empty: Please enter tweet!</i></p>
-      <script>
-        $("p").hide();
-        $("a").click(function (event) {
-          event.preventDefault();
-          $(this).hide();
-        });
-      </script>
       <p id="length_error"><i class="fas fa-exclamation-triangle">   Too Long: 140 character limit!</i></p>
-      <script>
-        $("p").hide();
-        $("a").click(function (event) {
-          event.preventDefault();
-          $(this).hide();
-        });
-      </script>
       <!-- New tweet input container -->
       <form id="tweet-form" method="POST" action="/tweets">
         <label for="tweet-text"> What are you humming about?</label>
         <br>
         <textarea name="text" id="tweet-text"></textarea>
         <section class="footer">
-          <button type="submit">Tweet</button>
+          <button id="submitTweet" type="submit">Tweet</button>
           <output name="counter" id="counter" class="counter" for="tweet-text">140</output>
         </section>
       </form>

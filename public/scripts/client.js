@@ -24,7 +24,7 @@ $(document).ready(function() {
     const $tweet = $(`<article class="tweet">
     <header class="tweet_header">
       <div class="user_icon">
-        <img src="https://i.imgur.com/73hZDYK.png"></img>
+        <img src=${tweet.user.avatars}></img>
         ${tweet['user'].name}
       </div>
       <div class="tweet_handle">
@@ -89,6 +89,9 @@ $(document).ready(function() {
     }
   };
   renderTweets(data);
+  //hides error elements
+  $("#empty_error").hide();
+  $("#length_error").hide();
 
   //add an event listener that listens for the submit event
   $('#tweet-form').on('submit', function(event) {
