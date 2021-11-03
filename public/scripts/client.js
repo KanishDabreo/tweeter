@@ -134,8 +134,8 @@ $(document).ready(function() {
   
   $('#tweet-text').on('input', function(event) {
     if (event.target.value.length <= 140) {
-      $("#length_error").hide();
-      $("#empty_error").hide();
+      $("#length_error").slideUp();
+      $("#empty_error").slideUp();
     }
   })
 
