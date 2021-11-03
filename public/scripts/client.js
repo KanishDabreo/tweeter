@@ -102,20 +102,20 @@ $(document).ready(function() {
     if ($textLength > 0 && $textLength <= 140) {
       $("#empty_error").hide();
       $("#length_error").hide();
-      return;
     }
-    //error for an empty tweet
     if ($textLength === 0 || $textLength === null) {
-      $("#empty_error").slideDown();
+      $("#empty_error").slideDown(1000);
       $("#length_error").hide();
-      return;
+      // alert("enter some text")
+      return null;
     }
-    //error for a tweet exceeds length
     if ($textLength > 140) {
-      $("#length_error").slideDown();
+      $("#length_error").slideDown(1000);
       $("#empty_error").hide();
+      // alert("too many characters");
       return;
     }
+
     //AJAX POST REQUEST
     $.ajax({
       url: "/tweets",
@@ -131,7 +131,7 @@ $(document).ready(function() {
       }
     });
   });
-  
+
   $('#tweet-text').on('input', function(event) {
     if (event.target.value.length <= 140) {
       $("#length_error").slideUp();
