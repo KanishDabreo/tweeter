@@ -102,12 +102,13 @@ $(document).ready(function() {
     if ($textLength > 0 && $textLength <= 140) {
       $("#empty_error").hide();
       $("#length_error").hide();
+      return;
     }
     //error for an empty tweet
     if ($textLength === 0 || $textLength === null) {
       $("#empty_error").slideDown();
       $("#length_error").hide();
-      return null;
+      return;
     }
     //error for a tweet exceeds length
     if ($textLength > 140) {
@@ -115,22 +116,28 @@ $(document).ready(function() {
       $("#empty_error").hide();
       return;
     }
+    //AJAX POST REQUEST
+    $.ajax({
+      url: "/tweets",
+      method: 'POST',
+      //Serialize the form data
+      data: serializeData,
+      success: (tweets) => {
+        loadTweets();
+        console.log('succes');
+      },
+      error: (err) => {
+        console.log('There was an error:', `${err}`);
+      }
+    });
   });
   
-  //AJAX POST REQUEST
-  $.ajax({
-    url: "/tweets",
-    method: 'POST',
-    //Serialize the form data
-    data: serializeData,
-    success: (tweets) => {
-      loadTweets();
-      console.log('succes');
-    },
-    error: (err) => {
-      console.log('There was an error:', `${err}`);
+  $('#tweet-text').on('input', function(event) {
+    if (event.target.value.length <= 140) {
+      $("#length_error").hide();
+      $("#empty_error").hide();
     }
-  });
+  })
 
   //AJAX GET REQUEST
   const loadTweets = function() {
