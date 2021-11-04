@@ -20,6 +20,11 @@ $(document).ready(function() {
         'color': 'red'
       });
     }
+    else {
+      $('#counter').css({
+        'color': 'black'
+      });
+    }
   });
 });
 

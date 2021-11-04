@@ -123,6 +123,7 @@ $(document).ready(function() {
       //Serialize the form data
       data: serializeData,
       success: (tweets) => {
+        $("#tweet-text").val("");
         loadTweets();
         console.log('succes');
       },
