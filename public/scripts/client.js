@@ -51,7 +51,7 @@ $(document).ready(function() {
 
   console.log("container", $('#tweets-container'));
   //adds new tweets to top of container
-  $('#tweets-container').prepend($tweet); 
+  $('#tweets-container').prepend($tweet);
   //filler data taken from initial-tweets.json
   const data = [
     {
@@ -137,8 +137,7 @@ $(document).ready(function() {
       $("#length_error").slideUp();
       $("#empty_error").slideUp();
     }
-  })
-
+  });
   //AJAX GET REQUEST
   const loadTweets = function() {
     $.ajax({
